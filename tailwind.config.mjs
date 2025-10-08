@@ -7,7 +7,7 @@ export default {
 			  primary: "#32CD32", // Light Green
 			  "background-light": "#f6f6f8",
 			  "background-dark": "#111121",
-			  "accent-green": "#a3e635",
+			  "accent-green": "#a3e635",//a3e635
 			},
 			borderRadius: {
 			  DEFAULT: "0.25rem",
