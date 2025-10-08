@@ -9,9 +9,6 @@ export default {
 			  "background-dark": "#111121",
 			  "accent-green": "#a3e635",
 			},
-			fontFamily: {
-			  display: ["Aristotelica"],
-			},
 			borderRadius: {
 			  DEFAULT: "0.25rem",
 			  lg: "0.5rem",
