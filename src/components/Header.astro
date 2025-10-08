@@ -1,152 +1,45 @@
 ---
+import { Image } from 'astro:assets';
+import LogoM4 from "../img/M5.webp";
+import mifoto from "../img/mifoto.png";
 ---
 
-<header id="main">
-    <div id="logo">
-        <a href="/">
-        <svg
-            viewBox="0 0 48 48"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="#ffffff"
-            stroke="#ffffff"
-            ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"
-                ><defs
-                    ><style>
-                        .a {
-                            fill: none;
-                            stroke: #ffffff;
-                            stroke-linecap: round;
-                            stroke-linejoin: round;
-                        }
-                    </style></defs
-                ><path
-                    class="a"
-                    d="M40.5,5.5H7.5a2,2,0,0,0-2,2v33a2,2,0,0,0,2,2h33a2,2,0,0,0,2-2V7.5A2,2,0,0,0,40.5,5.5Z"
-                ></path><path
-                    class="a"
-                    d="M12.8789,22.3318A5.5606,5.5606,0,0,1,18.44,16.7713h0A5.56,5.56,0,0,1,24,22.3318v8.8969"
-                ></path><line
-                    class="a"
-                    x1="12.8789"
-                    y1="16.7713"
-                    x2="12.8789"
-                    y2="31.2287"></line><path
-                    class="a"
-                    d="M24,22.3318a5.56,5.56,0,0,1,5.5605-5.5605h0a5.5606,5.5606,0,0,1,5.5606,5.5605v8.8969"
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 border-b border-gray-200 dark:border-gray-800">
+            <div class="flex items-center gap-4">
+                <Image src={LogoM4} alt="Mi Logo" class="h-8 w-8"/>
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white">Martín Capuano</h2>
+            </div>
+            <nav class="hidden w-full md:flex items-center justify-center pr-32 gap-8">
+                <a class="text-sm font-medium hover:text-accent-green transition-colors" href="#about">About</a>
+                <a class="text-sm font-medium hover:text-accent-green transition-colors" href="#experience">Experience</a>
+                <a class="text-sm font-medium hover:text-accent-green transition-colors" href="#skills">Skills</a>
+                <a class="text-sm font-medium hover:text-accent-green transition-colors" href="#projects">Projects</a>
+                <a class="text-sm font-medium hover:text-accent-green transition-colors" href="#contact">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-cover bg-center"
+                    style='background-image: url("");'
                 >
-                </path></g
-            >
-        </svg>
-        </a>
-    </div>
-    <div id="nombre">
-        <h1>Martín Capuano</h1>
-    </div>
-    <div id="links">
-        <div id="menu">
-            <div class="dropdown">
-                <svg viewBox="0 -4.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" stroke="#ffffff">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                    <g id="SVGRepo_iconCarrier">
-                        <defs> </defs>
-                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="Dribbble-Light-Preview" transform="translate(-220.000000, -6684.000000)"
-                                fill="#ffffff">
-                                <g id="icons" transform="translate(56.000000, 160.000000)">
-                                    <path
-                                        d="M164.292308,6524.36583 L164.292308,6524.36583 C163.902564,6524.77071 163.902564,6525.42619 164.292308,6525.83004 L172.555873,6534.39267 C173.33636,6535.20244 174.602528,6535.20244 175.383014,6534.39267 L183.70754,6525.76791 C184.093286,6525.36716 184.098283,6524.71997 183.717533,6524.31405 C183.328789,6523.89985 182.68821,6523.89467 182.29347,6524.30266 L174.676479,6532.19636 C174.285736,6532.60124 173.653152,6532.60124 173.262409,6532.19636 L165.705379,6524.36583 C165.315635,6523.96094 164.683051,6523.96094 164.292308,6524.36583"
-                                        id="arrow_down-[#ffffff]"> </path>
-                                </g>
-                            </g>
-                        </g>
-                    </g>
-                </svg>
-                <div class="dropdown-content">
-                    <a href="/about">About</a>
-                    <a href="/experience">Experience</a>
-                    <a href="/contact">Contact</a>
+                <Image src={mifoto} alt="Mi foto" class="rounded-full"></Image>
                 </div>
+                <button class="md:hidden p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800">
+                    <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M4 6h16M4 12h16m-7 6h7"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"></path>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
 </header>
-<style>
-    #main {
-        color: white;
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        align-items: center;
-        direction: ltr;
-    }
-    #logo{
-        display: flex;
-        justify-content: start;
-    }
-    #logo a{
-        all: unset;
-        cursor: pointer;
-    }
-    #nombre{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #nombre h1{
-        all: unset;
-        font-size: 5rem;
-        margin-top: 20px;
-    }
-    #links {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: end;
-    }
-    #links a{
-        padding: 5px;
-        font-size: 1.8rem;
-    }
-    a {
-        all: unset;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-    a:hover{
-        color: black;
-        background-color: white;
-    }
-    #logo svg {
-        height: 100px;
-    }
-    .dropdown svg{
-        margin-right: 20px;
-        height: 50px;
-        transition: all 0.2s;
-    }
-    .dropdown:hover svg{
-        transform: rotate(180deg);
-        transition: all 0.2s;
-    }
-    .dropdown{
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-    }
-    .dropdown-content{
-        display: none;
-    }
-    .dropdown:hover .dropdown-content{
-        position: absolute;
-        right: 20px;
-        top: 80px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: end;
-    }
-</style>
