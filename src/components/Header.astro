@@ -3,6 +3,8 @@ import { Image } from 'astro:assets';
 import LogoM4 from "../img/M5.png";
 import mifoto from "../img/mifoto.png";
 
+import LangSelect from "../components/LenguajeSelect.astro";
+
 import { useTranslation } from '../i18n/utils';
 import { labels } from '../i18n/ui';
 
@@ -46,6 +48,7 @@ const translated = useTranslation(currentLang as keyof typeof labels);
                     </svg>
                 </button>
             </div>
+            <LangSelect></LangSelect>
         </div>
     </div>
 </header>

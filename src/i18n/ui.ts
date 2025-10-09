@@ -40,7 +40,8 @@ export const labels = {
         'pj.p2name': 'Projects',
         'pj.p2text': 'Projects',
         'pj.button1': 'View Project',
-        'pj.button2': 'GitHub'
+        'pj.button2': 'GitHub',
+        'lsel.label': 'Ver en español'
     },
     es: {
         'nav.about':'Sobre mi',
@@ -83,6 +84,7 @@ export const labels = {
         'pj.p2name': 'Projects',
         'pj.p2text': 'Projects',
         'pj.button1': 'Ver Proyecto',
-        'pj.button2': 'GitHub'
+        'pj.button2': 'GitHub',
+        'lsel.label': 'See in english'
     }
 }
