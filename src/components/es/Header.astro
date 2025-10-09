@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets';
+import LogoM4 from "../img/M5.png";
+import mifoto from "../img/mifoto.png";
+---
+
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 border-b border-gray-200 dark:border-gray-800">
+            <div class="flex items-center gap-4">
+                <Image src={LogoM4} alt="Mi Logo" class="h-8 w-8"/>
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white">Martín Capuano</h2>
+            </div>
+            <nav class="hidden w-full md:flex items-center justify-center pr-32 gap-8">
+                <a class="text-sm font-medium hover:text-accent-green transition-colors" href="#about">About</a>
+                <a class="text-sm font-medium hover:text-accent-green transition-colors" href="#experience">Experience</a>
+                <a class="text-sm font-medium hover:text-accent-green transition-colors" href="#skills">Skills</a>
+                <a class="text-sm font-medium hover:text-accent-green transition-colors" href="#projects">Projects</a>
+                <a class="text-sm font-medium hover:text-accent-green transition-colors" href="#contact">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-cover bg-center"
+                    style='background-image: url("");'
+                >
+                <Image src={mifoto} alt="Mi foto" class="rounded-full"></Image>
+                </div>
+                <button class="md:hidden p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800">
+                    <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M4 6h16M4 12h16m-7 6h7"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
