@@ -1,4 +1,11 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { useTranslation } from '../i18n/utils';
+import { labels } from '../i18n/ui';
+
+const currentLang = Astro.currentLocale || "en";
+const translated = useTranslation(currentLang as keyof typeof labels);
+
 interface Props {
 	title: string;
 }
@@ -7,7 +14,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={currentLang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Martín Capuano personal portfolio made with Astro" />
@@ -20,6 +27,7 @@ const { title } = Astro.props;
 		<slot />
 	</body>
 </html>
+
 <style is:global>
 	:root {
 		--accent: 136, 58, 234;
