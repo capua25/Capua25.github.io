@@ -1,5 +1,9 @@
 ---
+import { useTranslation } from '../i18n/utils';
+import { labels } from '../i18n/ui';
 
+const currentLang = Astro.currentLocale || "en";
+const translated = useTranslation(currentLang as keyof typeof labels);
 ---
 
 <section id="contact">
@@ -7,51 +11,51 @@
         <h2
             class="text-3xl font-bold text-center text-gray-900 dark:text-white"
         >
-            Contact Me
+            {translated('contact.title')}
         </h2>
         <form class="mt-12 space-y-6">
             <div>
                 <label
                     class="block text-sm font-medium text-gray-700 dark:text-gray-300"
-                    for="name">Name</label
+                    for="name">{translated('contact.name')}</label
                 >
                 <input
                     class="mt-1 block w-full px-4 py-3 bg-white dark:bg-gray-800/20 border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:ring-accent-green focus:border-accent-green"
                     id="name"
                     name="name"
-                    placeholder="Your Name"
+                    placeholder={translated('contact.nameplaceholder')}
                     type="text"
                 />
             </div>
             <div>
                 <label
                     class="block text-sm font-medium text-gray-700 dark:text-gray-300"
-                    for="email">Email</label
+                    for="email">{translated('contact.email')}</label
                 >
                 <input
                     class="mt-1 block w-full px-4 py-3 bg-white dark:bg-gray-800/20 border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:ring-accent-green focus:border-accent-green"
                     id="email"
                     name="email"
-                    placeholder="Your Email"
+                    placeholder={translated('contact.emailplaceholder')}
                     type="email"
                 />
             </div>
             <div>
                 <label
                     class="block text-sm font-medium text-gray-700 dark:text-gray-300"
-                    for="message">Message</label
+                    for="message">{translated('contact.message')}</label
                 >
                 <textarea
                     class="mt-1 block w-full px-4 py-3 bg-white dark:bg-gray-800/20 border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:ring-accent-green focus:border-accent-green"
                     id="message"
                     name="message"
-                    placeholder="Your Message"
+                    placeholder={translated('contact.messageplaceholder')}
                     rows="4"></textarea>
             </div>
             <div class="text-center">
                 <button
                     class="inline-block bg-accent-green text-background-dark font-bold py-3 px-8 rounded-lg hover:bg-accent-green/90 transition-colors"
-                    type="submit">Send Message</button
+                    type="submit">{translated('contact.button')}</button
                 >
             </div>
         </form>

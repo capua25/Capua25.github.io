@@ -1,10 +1,7 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n';
-import { useTranslation } from '../i18n/utils';
-import { labels } from '../i18n/ui';
 
 const currentLang = Astro.currentLocale || "en";
-const translated = useTranslation(currentLang as keyof typeof labels);
 
 interface Props {
 	title: string;

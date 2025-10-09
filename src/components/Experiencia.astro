@@ -1,5 +1,9 @@
 ---
+import { useTranslation } from '../i18n/utils';
+import { labels } from '../i18n/ui';
 
+const currentLang = Astro.currentLocale || "en";
+const translated = useTranslation(currentLang as keyof typeof labels);
 ---
 
 <section id="experience">
@@ -7,7 +11,7 @@
         <h2
             class="text-3xl font-bold text-center text-gray-900 dark:text-white"
         >
-            Work Experience
+            {translated('exp.title')}
         </h2>
         <div class="mt-12 grid md:grid-cols-2 gap-12">
             <div
@@ -21,47 +25,36 @@
                     <h3
                         class="text-xl font-bold text-gray-900 dark:text-white"
                     >
-                        Software Developer
+                        {translated('exp.job1title')}
                     </h3>
                     <p
                         class="text-sm text-gray-500 dark:text-gray-400"
                     >
-                        Jun 2023 - Present
+                        {translated('exp.job1date')}
                     </p>
                 </div>
                 <p
                     class="text-md font-medium text-accent-green mt-1"
                 >
-                    Eurogen SRL - B&V Importaciones SRL
+                    {translated('exp.job1name')}
                 </p>
                 <ul
                     class="mt-4 list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300"
                 >
                     <li>
-                        Designed and developed desktop
-                        applications for enterprise using
-                        PCSoft's Windev and its native
-                        relational database HFSQL.
+                        {translated('exp.job1point1')}
                     </li>
                     <li>
-                        Worked on maintenance of legacy
-                        software, patching errors and performing
-                        updates and improvements.
+                        {translated('exp.job1point2')}
                     </li>
                     <li>
-                        Provided technical support and
-                        troubleshooting for existing
-                        applications.
+                        {translated('exp.job1point3')}
                     </li>
                     <li>
-                        Participated in the full software
-                        development lifecycle from conception to
-                        deployment.
+                        {translated('exp.job1point4')}
                     </li>
                     <li>
-                        Built and managed enterprise server with
-                        linux, focused on performance and
-                        security.
+                        {translated('exp.job1point5')}
                     </li>
                 </ul>
             </div>
@@ -76,39 +69,33 @@
                     <h3
                         class="text-xl font-bold text-gray-900 dark:text-white"
                     >
-                        Fullstack Web Developer
+                        {translated('exp.job2title')}
                     </h3>
                     <p
                         class="text-sm text-gray-500 dark:text-gray-400"
                     >
-                        Jan 2023 - Present
+                        {translated('exp.job2date')}
                     </p>
                 </div>
                 <p
                     class="text-md font-medium text-accent-green mt-1"
                 >
-                    Freelance
+                    {translated('exp.job2name')}
                 </p>
                 <ul
                     class="mt-4 list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300"
                 >
                     <li>
-                        Developed and maintained web
-                        applications using JavaScript, Astro,
-                        Tailwind, and Node.js.
+                        {translated('exp.job2point1')}
                     </li>
                     <li>
-                        Collaborated with cross-functional teams
-                        to define, design, and ship new
-                        features.
+                        {translated('exp.job2point2')}
                     </li>
                     <li>
-                        Implemented responsive UIs with a focus
-                        on user experience and performance.
+                        {translated('exp.job2point3')}
                     </li>
                     <li>
-                        Collaborated in existing projects with
-                        technologies such as PHP or Python.
+                        {translated('exp.job2point4')}
                     </li>
                 </ul>
             </div>
