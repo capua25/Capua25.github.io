@@ -2,21 +2,25 @@
 import { Image } from "astro:assets";
 import engFlag from "../img/english.png";
 import spaFlag from "../img/spanish.png";
-
+import { getRelativeLocaleUrl } from 'astro:i18n';
 import { useTranslation } from "../i18n/utils";
 import { labels } from "../i18n/ui";
 
 const currentLang = Astro.currentLocale || "en";
 const translated = useTranslation(currentLang as keyof typeof labels);
 
-let buttonText = "";
+let flagIcon = null;
+let link = null;
 if(currentLang=="en"){
-    buttonText  = translated("lsel.label");
+    flagIcon = spaFlag;
+    link = getRelativeLocaleUrl("es");
+}else{
+    flagIcon = engFlag;
+    link = getRelativeLocaleUrl("en");
 }
-
 ---
 
-<a class="inline-flex items-center gap-2 h-10 min-w-44 ml-6 bg-transparent border-2 border-accent-green text-accent-green text-sm font-medium py-2 px-2 rounded-lg hover:bg-accent-green hover:text-background-dark transition-all transform hover:scale-105" href="#">
-    <Image src={spaFlag} alt="Flag" class="h-6 w-6"></Image>
+<a href={link} class="inline-flex items-center gap-2 h-10 min-w-44 ml-6 bg-transparent border-2 border-accent-green text-accent-green text-sm font-medium py-2 px-2 rounded-lg hover:bg-accent-green hover:text-background-dark transition-all transform hover:scale-105">
+    <Image src={flagIcon} alt="Flag" class="h-6 w-6"></Image>
     {translated("lsel.label")}
 </a>
