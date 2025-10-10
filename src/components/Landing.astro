@@ -1,15 +1,22 @@
 ---
 import { useTranslation } from "../i18n/utils";
 import { labels } from "../i18n/ui";
+import { Image } from "astro:assets";
+import fondo from "../img/Carmelo-vista-aerea.jpg";
 
 const currentLang = Astro.currentLocale || "en";
 const translated = useTranslation(currentLang as keyof typeof labels);
+
+let pdfCVroute = null;
+if(currentLang=="en"){
+  pdfCVroute  = "/CV-MartinCapuano-En.pdf";
+}else{
+  pdfCVroute  = "/CV-MartinCapuano-Es.pdf";
+}
 ---
 
-<section
-  class="relative h-[60vh] min-h-[400px] flex items-center justify-center text-center text-white bg-cover bg-center"
-  style='background-image: linear-gradient(rgba(17, 17, 33, 0.7), rgba(17, 17, 33, 0.9)), url("https://politica.uruguay30.com/wp-content/uploads/2021/07/Carmelo-vista-aerea.jpg");'
->
+<section class="relative h-[60vh] min-h-[95vh] flex items-center justify-center text-center text-white bg-cover bg-center"
+  style=`background-image: linear-gradient(rgba(17, 17, 33, 0.7), rgba(17, 17, 33, 0.9)), url(${fondo.src});`>
   <div class="max-w-4xl px-4">
     <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold">Martín Capuano</h1>
     <p class="mt-4 text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto">
@@ -20,11 +27,11 @@ const translated = useTranslation(currentLang as keyof typeof labels);
     >
       <a
         class="inline-block border-2 border-accent-green bg-accent-green text-background-dark font-bold py-3 px-8 rounded-lg hover:bg-accent-green/90 transition-transform transform hover:scale-105"
-        href="#projects">{translated("landing.button1")}</a
+        href="#about-me">{translated("landing.button1")}</a
       >
       <a
         class="inline-flex items-center gap-2 bg-transparent border-2 border-accent-green text-accent-green font-bold py-3 px-8 rounded-lg hover:bg-accent-green hover:text-background-dark transition-all transform hover:scale-105"
-        href="#"
+        href={pdfCVroute} target="_blank"
       >
         <svg
           class="w-5 h-5"
