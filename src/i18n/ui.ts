@@ -9,6 +9,16 @@ export const labels = {
         'landing.text': 'Software Developer with experience in DevOps and Web development using modern and well-established technologies.',
         'landing.button1': 'About Me',
         'landing.button2': 'Download Resume',
+        'about.title':'About Me',
+        'about.text':`I am a software developer with experience in <b class="text-accent-green">DevOps</b> environments, 
+            specialized in using <b class="text-accent-green">WinDev</b> for
+            enterprise solutions and with a strong background in
+            <b class="text-accent-green">full-stack</b> web development using technologies
+            like <b class="text-accent-green">JavaScript</b> and <b class="text-accent-green">node.js</b> with frameworks
+            like <b class="text-accent-green">Astro</b>. I combine expertise in continuous
+            integration, automation, and deployment with a focus
+            on <b class="text-accent-green">efficiency</b>, code <b class="text-accent-green">quality</b>, and
+            continuous <b class="text-accent-green">improvement</b> of development processes.`,
         'exp.title':'Work Experience',
         'exp.job1title':'Software Developer',
         'exp.job1date':'Jun 2023 - Present',
@@ -53,6 +63,15 @@ export const labels = {
         'landing.text': 'Desarrollador de software con experiencia en DevOps y desarrollo web utilizando tecnologías modernas y consolidadas.',
         'landing.button1': 'Sobre mí',
         'landing.button2': 'Descargar CV',
+        'about.title':'Sobre mí',
+        'about.text': `Soy un desarrollador de software con experiencia en entornos <b class="text-accent-green">DevOps</b>, 
+            especializado en el uso de <b class="text-accent-green">WinDev</b> para soluciones empresariales, con un 
+            fuerte background en desarrollo web <b class="text-accent-green">full-stack</b> usando tecnologías como 
+            <b class="text-accent-green">JavaScript</b> con <b class="text-accent-green">node.js</b> y 
+            frameworks como <b class="text-accent-green">Astro</b>. Tengo experiencia en integración continua, 
+            automatización, y despliegue con foco en <b class="text-accent-green">eficiencia</b>, 
+            <b class="text-accent-green">calidad de código</b>, y <b class="text-accent-green">mejora continua</b> 
+            de los procesos de desarrollo.`,
         'exp.title':'Experiencia Laboral',
         'exp.job1title':'Desarrollador de Software',
         'exp.job1date':'Jun 2023 - Presente',
