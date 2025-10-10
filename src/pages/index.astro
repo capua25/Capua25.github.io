@@ -1,8 +1,16 @@
 ---
 const currentLang = Astro.currentLocale || "en";
-if(currentLang=="en"){
-    return Astro.redirect("/en/");
-}else{
-    return Astro.redirect("/es/");
-}
+// if(currentLang=="en"){
+//     return Astro.redirect("/en/");
+// }else{
+//     return Astro.redirect("/es/");
+// }
 ---
+<script is:inline>
+    const currentLang = Astro.currentLocale || "en";
+    if({currentLang}=="en"){
+        return Astro.redirect("/en/");
+    }else{
+        return Astro.redirect("/es/");
+    }
+</script>
