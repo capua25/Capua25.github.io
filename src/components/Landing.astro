@@ -2,7 +2,7 @@
 import { useTranslation } from "../i18n/utils";
 import { labels } from "../i18n/ui";
 import { Image } from "astro:assets";
-import fondo from "../img/Carmelo-vista-aerea.jpg";
+import fondo from "../img/puente-de-carmelo.jpg";
 
 const currentLang = Astro.currentLocale || "en";
 const translated = useTranslation(currentLang as keyof typeof labels);
@@ -22,17 +22,9 @@ if(currentLang=="en"){
     <p class="mt-4 text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto">
       {translated("landing.text")}
     </p>
-    <div
-      class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
-    >
-      <a
-        class="inline-block border-2 border-accent-green bg-accent-green text-background-dark font-bold py-3 px-8 rounded-lg hover:bg-accent-green/90 transition-transform transform hover:scale-105"
-        href="#about-me">{translated("landing.button1")}</a
-      >
-      <a
-        class="inline-flex items-center gap-2 bg-transparent border-2 border-accent-green text-accent-green font-bold py-3 px-8 rounded-lg hover:bg-accent-green hover:text-background-dark transition-all transform hover:scale-105"
-        href={pdfCVroute} target="_blank"
-      >
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a class="inline-block border-2 border-accent-green bg-accent-green text-background-dark font-bold py-3 px-8 rounded-lg hover:bg-accent-green/90 transition-transform transform hover:scale-105" href="#about-me">{translated("landing.button1")}</a>
+      <a class="inline-flex items-center gap-2 bg-transparent border-2 border-accent-green text-accent-green font-bold py-3 px-8 rounded-lg hover:bg-accent-green hover:text-background-dark transition-all transform hover:scale-105" href={pdfCVroute} target="_blank">
         <svg
           class="w-5 h-5"
           fill="none"
