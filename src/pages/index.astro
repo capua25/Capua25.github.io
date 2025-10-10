@@ -1,20 +1,30 @@
 ---
-//const currentLang = Astro.currentLocale || "en";
-// if(currentLang=="en"){
-//     return Astro.redirect("/en/");
-// }else{
-//     return Astro.redirect("/es/");
-// }
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Contacto from "../components/Contacto.astro";
+import Experiencia from "../components/Experiencia.astro";
+import Skills from "../components/Skills.astro";
+import Proyectos from "../components/Proyectos.astro";
+import Landing from "../components/Landing.astro";
+import About from "../components/About.astro";
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=http://example.com/" />
-    <title>Martín Capuano</title>
-</head>
-<body>
-    
-</body>
-</html>
+
+<Layout title="Martín Capuano - Software Developer">
+	<div class="flex flex-col min-h-screen">
+		<Header></Header>
+		<main class="flex-grow">
+			<Landing></Landing>
+			<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-24">
+				<About></About>
+				<Experiencia></Experiencia>
+				<Skills></Skills>
+				<Proyectos></Proyectos>
+				<Contacto></Contacto>
+			</div>
+		</main>
+		<Footer></Footer>
+	</div>
+</Layout>
+
+<style></style>
