@@ -51,8 +51,8 @@ export const labels = {
         'pj.p2text': `Very similar to Eurogen's ERP but oriented in a national-scale bussiness, BYV Importaciones SRL, with same functionalities as Eurogen but with a plus in data analisys and connected with PowerBI.`,
         'pj.p3name': 'Sonora Podcast Landing Page',
         'pj.p3text': 'Landing page for a regional event about podcasts from all over latin-america, made with Astro.',
-        'pj.p4name': 'Landing Page',
-        'pj.p4text': 'Sonora Podcast',
+        'pj.p4name': 'Tetris Web Game',
+        'pj.p4text': 'A while ago I recreated the classic Tetris game using JavaScript, HTML, and CSS, with an API in backend using Node.js and Express.js to store users and their high scores in MariaDB database. First time using JWT.',
         'pj.button1': 'View',
         'pj.button2': 'GitHub',
         'lsel.label': 'Ver en español'
@@ -108,8 +108,8 @@ export const labels = {
         'pj.p2text': `Muy similar al ERP de Eurogen pero orientado a un negocio a escala nacional, BYV Importaciones SRL, con las mismas funcionalidades que Eurogen pero con un plus en análisis de datos y conectado con PowerBI.`,
         'pj.p3name': 'Landing Page de Sonora Podcast',
         'pj.p3text': 'Landing page para un evento regional sobre podcasts de toda Latinoamérica, realizado con Astro.',
-        'pj.p4name': 'Landing Page',
-        'pj.p4text': 'Sonora Podcast',
+        'pj.p4name': 'Tetris Web Game',
+        'pj.p4text': 'Hace un tiempo recreé el clásico juego de Tetris usando JavaScript, HTML, y CSS, con una API en el backend usando Node.js y Express.js para guardar usuarios y sus puntajes en una base de datos MariaDB. Primera vez usando JWT.',
         'pj.button1': 'Ver',
         'pj.button2': 'GitHub',
         'lsel.label': 'See in english'

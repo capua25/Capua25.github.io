@@ -5,6 +5,8 @@ import { labels } from "../i18n/ui";
 import Eurogen from "../img/proyectos/eurogen.png";
 import Rustico from "../img/proyectos/rustico.png";
 import Sonora from "../img/proyectos/sonora.png";
+import Tetris from "../img/proyectos/tetris.png";
+import Modal from "../components/Modal.astro" ;
 
 const currentLang = Astro.currentLocale || "en";
 const translated = useTranslation(currentLang as keyof typeof labels);
@@ -19,11 +21,6 @@ const translated = useTranslation(currentLang as keyof typeof labels);
       <div class="bg-white dark:bg-gray-800/20 rounded-lg shadow-lg overflow-hidden group border border-transparent hover:border-accent-green transition-all duration-300">
         <div class="relative">
           <Image src={Eurogen} alt="Eurogen" class="w-full h-56 object-cover"></Image>
-          <!-- <img
-            alt="E-commerce Platform"
-            class="w-full h-56 object-cover"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCof2j6PBHfFhqZQasFxPc4DhaFu7uY5Owt0ofjaH1z0rFx8UcAECOOfaUSgVSMS8RwqoTnJcFCcPyWn9y6goQNF_pOQvH1Rd0w9xokYgeSr_q-RdB1Vc-SbbM-ArBXNuz25EZ2Tff2i0KUsE0KRohBUcfQpBGr4I5WSC9w8Nn1IzwV4jBydiSjIOV7w_QN2sX1R45tFUX4QxPGc_s0gkpZeu-hicLsezXDG37o6WXvf1sZPwgRGzBL-HC8WphhO4aJAHGbUlXooaQ"
-          /> -->
           <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300">
           </div>
         </div>
@@ -35,20 +32,15 @@ const translated = useTranslation(currentLang as keyof typeof labels);
             {translated("pj.p1text")}
           </p>
           <div class="mt-4 flex gap-4">
-            <a class="inline-block bg-accent-green text-background-dark text-sm font-bold py-2 px-4 rounded hover:bg-accent-green/90 transition-colors" href="#">
-              {translated("pj.button1")}
-            </a>
+            <Modal title={translated("pj.button1")} openID="open1" modalID="modal1" closeID="close1">
+              <Image src={Eurogen} alt="Eurogen" class="w-full h-3/4 mt-24 object-contain"></Image>
+            </Modal>
           </div>
         </div>
       </div>
       <div class="bg-white dark:bg-gray-800/20 rounded-lg shadow-lg overflow-hidden group border border-transparent hover:border-accent-green transition-all duration-300">
         <div class="relative">
           <Image src={Rustico} alt="Rustico" class="w-full h-56 object-cover"></Image>
-          <!-- <img
-            alt="Portfolio Website"
-            class="w-full h-56 object-cover"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJvqgBgcWA9-XcFu1E-gdk3Pg3KeG1QelaoySWDvbwYnTLUM8WLbnMOkhrau9boSFXeUx9lWgcjJEAIT7Ytis47pifkMpZF2FUdHtNrDhw0I6gvOCra68T001TIQ3Jl8ugjG9bHIrNmxM21zZ2sTtclQ6k7vvSjmAFeQ6TCtlgDP2IxBBI_NAXavexqYgp4fuuDP5eT2_6fIx2d-WhW6blEPhHYFFCS-oTq1BFndyQIX0is0SPUxTOJ3NvObMbTjyd_hJrn5a9mZ8"
-          /> -->
           <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300">
           </div>
         </div>
@@ -60,20 +52,15 @@ const translated = useTranslation(currentLang as keyof typeof labels);
             {translated("pj.p2text")}
           </p>
           <div class="mt-4 flex gap-4">
-            <a class="inline-block bg-accent-green text-background-dark text-sm font-bold py-2 px-4 rounded hover:bg-accent-green/90 transition-colors" href="#">
-              {translated("pj.button1")}
-            </a>
+            <Modal title={translated("pj.button1")} openID="open2" modalID="modal2" closeID="close2">
+              <Image src={Rustico} alt="Eurogen" class="w-full h-3/4 mt-24 object-contain"></Image>
+            </Modal>
           </div>
         </div>
       </div>
       <div class="bg-white dark:bg-gray-800/20 rounded-lg shadow-lg overflow-hidden group border border-transparent hover:border-accent-green transition-all duration-300">
         <div class="relative">
           <Image src={Sonora} alt="Sonora Podcast" class="w-full h-56 object-cover"></Image>
-          <!-- <img
-            alt="E-commerce Platform"
-            class="w-full h-56 object-cover"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCof2j6PBHfFhqZQasFxPc4DhaFu7uY5Owt0ofjaH1z0rFx8UcAECOOfaUSgVSMS8RwqoTnJcFCcPyWn9y6goQNF_pOQvH1Rd0w9xokYgeSr_q-RdB1Vc-SbbM-ArBXNuz25EZ2Tff2i0KUsE0KRohBUcfQpBGr4I5WSC9w8Nn1IzwV4jBydiSjIOV7w_QN2sX1R45tFUX4QxPGc_s0gkpZeu-hicLsezXDG37o6WXvf1sZPwgRGzBL-HC8WphhO4aJAHGbUlXooaQ"
-          /> -->
           <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300">
           </div>
         </div>
@@ -85,10 +72,10 @@ const translated = useTranslation(currentLang as keyof typeof labels);
             {translated("pj.p3text")}
           </p>
           <div class="mt-4 flex gap-4">
-            <a class="inline-block bg-accent-green text-background-dark text-sm font-bold py-2 px-4 rounded hover:bg-accent-green/90 transition-colors" href="#">
+            <a class="inline-block bg-accent-green text-background-dark text-sm font-bold py-2 px-4 rounded hover:bg-accent-green/90 transition-colors" href="https://sonorapodcast.uy" target="_blank">
               {translated("pj.button1")}
             </a>
-            <a class="inline-block bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-bold py-2 px-4 rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" href="#">
+            <a class="inline-block bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-bold py-2 px-4 rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" href="https://github.com/capua25/SonoraPodcast" target="_blank">
               {translated("pj.button2")}
             </a>
           </div>
@@ -96,12 +83,7 @@ const translated = useTranslation(currentLang as keyof typeof labels);
       </div>
       <div class="bg-white dark:bg-gray-800/20 rounded-lg shadow-lg overflow-hidden group border border-transparent hover:border-accent-green transition-all duration-300">
         <div class="relative">
-          <Image src={Eurogen} alt="Eurogen" class="w-full h-56 object-cover"></Image>
-          <!-- <img
-            alt="E-commerce Platform"
-            class="w-full h-56 object-cover"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCof2j6PBHfFhqZQasFxPc4DhaFu7uY5Owt0ofjaH1z0rFx8UcAECOOfaUSgVSMS8RwqoTnJcFCcPyWn9y6goQNF_pOQvH1Rd0w9xokYgeSr_q-RdB1Vc-SbbM-ArBXNuz25EZ2Tff2i0KUsE0KRohBUcfQpBGr4I5WSC9w8Nn1IzwV4jBydiSjIOV7w_QN2sX1R45tFUX4QxPGc_s0gkpZeu-hicLsezXDG37o6WXvf1sZPwgRGzBL-HC8WphhO4aJAHGbUlXooaQ"
-          /> -->
+          <Image src={Tetris} alt="Eurogen" class="w-full h-56 object-cover"></Image>
           <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300">
           </div>
         </div>
@@ -113,10 +95,13 @@ const translated = useTranslation(currentLang as keyof typeof labels);
             {translated("pj.p4text")}
           </p>
           <div class="mt-4 flex gap-4">
-            <a class="inline-block bg-accent-green text-background-dark text-sm font-bold py-2 px-4 rounded hover:bg-accent-green/90 transition-colors" href="#">
+            <!-- <a class="inline-block bg-accent-green text-background-dark text-sm font-bold py-2 px-4 rounded hover:bg-accent-green/90 transition-colors" href="#">
               {translated("pj.button1")}
-            </a>
-            <a class="inline-block bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-bold py-2 px-4 rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" href="#">
+            </a> -->
+            <Modal title={translated("pj.button1")} openID="open3" modalID="modal3" closeID="close3">
+              <Image src={Tetris} alt="Eurogen" class="w-full h-3/4 mt-24 object-contain"></Image>
+            </Modal>
+            <a class="inline-block bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-bold py-2 px-4 rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" href="https://github.com/capua25/NewTetris" target="_blank">
               {translated("pj.button2")}
             </a>
           </div>
