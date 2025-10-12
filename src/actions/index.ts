@@ -13,5 +13,5 @@ export const server = {
         message: "Gracias por tu comentario!"
       };
     }
-  }
-)};
+  })
+};
