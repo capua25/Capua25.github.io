@@ -1,4 +1,5 @@
 ---
+import { actions } from "astro:actions";
 import { useTranslation } from "../i18n/utils";
 import { labels } from "../i18n/ui";
 
@@ -22,18 +23,6 @@ const translated = useTranslation(currentLang as keyof typeof labels);
           name="name"
           placeholder={translated("contact.nameplaceholder")}
           type="text"
-        />
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="email">
-          {translated("contact.email")}
-        </label>
-        <input
-          class="mt-1 block w-full px-4 py-3 bg-white dark:bg-gray-800/20 border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:ring-accent-green focus:border-accent-green"
-          id="email"
-          name="email"
-          placeholder={translated("contact.emailplaceholder")}
-          type="email"
         />
       </div>
       <div>
