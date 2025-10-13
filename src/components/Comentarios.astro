@@ -14,15 +14,15 @@ if(comments.success){
 ---
 
 <section id="comentarios">
-    <div class="max-w-2xl mx-auto">
+    <div class="max-w-7xl mx-auto">
         <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">
             {translated('comments.title')}
         </h2>
-        <div class="flex overflow-clip gap-6">
+        <div class="flex flex-row justify-center flex-wrap gap-6">
             {comentarios.map((comentario) => {
                 let date = new Date(comentario.created_at);
                 return (
-                    <div class="block w-96 p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <div class="block min-w-96 w-96 p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
                             {comentario.name}
                         </h3>
