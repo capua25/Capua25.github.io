@@ -100,6 +100,7 @@ const translated = useTranslation(currentLang as keyof typeof labels);
         errorText.classList.add('text-accent-green');
         errorText.classList.remove('hidden');
         form.reset();
+        // window.location.reload();
       } else {
           errorText.innerHTML = translated('error.generic');
           errorText.classList.add('text-red-600');
