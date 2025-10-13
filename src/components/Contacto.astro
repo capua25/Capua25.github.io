@@ -75,7 +75,7 @@ const translated = useTranslation(currentLang as keyof typeof labels);
       return;
     }
 
-    const response = await actions.addCommentToDB({ username, comment });
+    const response = await actions.addCommentToDB({ nombre: username, texto: comment });
     
     errorText.textContent = "";
     if(isInputError(response.error)){
