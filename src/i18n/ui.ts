@@ -106,7 +106,7 @@ export const labels = {
         'contact.messageplaceholder':'Tu Comentario',
         'contact.button':'Enviar Mensaje',
         'contact.success': 'Gracias por tu comentario!',
-        'comments.title': 'Comments',
+        'comments.title': 'Comentarios',
         'pj.title': 'Proyectos',
         'pj.p1name': 'ERP Eurogen',
         'pj.p1text': 'Software de gestión utilizado por Eurogen SRL, empresa local multisucursal, realizado en WinDev con foco en gestión de clientes, stock y ventas.',
