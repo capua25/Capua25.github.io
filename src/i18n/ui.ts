@@ -42,6 +42,7 @@ export const labels = {
         'contact.message':'Comment',
         'contact.messageplaceholder':'Your Comment',
         'contact.button':'Send Message',
+        'contact.success': 'Thank you for your comment!',
         'pj.title': 'Projects',
         'pj.p1name': 'Eurogen ERP',
         'pj.p1text': 'Management software used by Eurogen SRL, a multi-sucursal local business, made in WinDev with focus on clients, stock and selling management.',
@@ -53,7 +54,13 @@ export const labels = {
         'pj.p4text': 'A while ago I recreated the classic Tetris game using JavaScript, HTML, and CSS, with an API in backend using Node.js and Express.js to store users and their high scores in MariaDB database. First time using JWT.',
         'pj.button1': 'View',
         'pj.button2': 'GitHub',
-        'lsel.label': 'Ver en español'
+        'lsel.label': 'Ver en español',
+        'error.void': 'Please, complete all fields',
+        'error.name.short': 'The name cannot have less than 3 characters',
+        'error.name.long': 'The name cannot have more than 25 characters',
+        'error.message.short': 'The comment cannot have less than 10 characters',
+        'error.message.long': 'The comment cannot have more than 250 characters',
+        'error.generic': 'An error has ocurred, please try again'
     },
     es: {
         'nav.about':'Sobre mi',
@@ -97,6 +104,7 @@ export const labels = {
         'contact.message':'Comentario',
         'contact.messageplaceholder':'Tu Comentario',
         'contact.button':'Enviar Mensaje',
+        'contact.success': 'Gracias por tu comentario!',
         'pj.title': 'Proyectos',
         'pj.p1name': 'ERP Eurogen',
         'pj.p1text': 'Software de gestión utilizado por Eurogen SRL, empresa local multisucursal, realizado en WinDev con foco en gestión de clientes, stock y ventas.',
@@ -108,6 +116,12 @@ export const labels = {
         'pj.p4text': 'Hace un tiempo recreé el clásico juego de Tetris usando JavaScript, HTML, y CSS, con una API en el backend usando Node.js y Express.js para guardar usuarios y sus puntajes en una base de datos MariaDB. Primera vez usando JWT.',
         'pj.button1': 'Ver',
         'pj.button2': 'GitHub',
-        'lsel.label': 'See in english'
+        'lsel.label': 'See in english',
+        'error.void': 'Por favor, completa todos los campos',
+        'error.name.short': 'El nombre no puede tener menos de 3 caracteres',
+        'error.name.long': 'El nombre no puede tener más de 25 caracteres',
+        'error.message.short': 'El comentario no puede tener menos de 10 caracteres',
+        'error.message.long': 'El comentario no puede tener más de 250 caracteres',
+        'error.generic': 'Ha ocurrido un error, por favor reintente'
     }
 }

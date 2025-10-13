@@ -1,16 +1,24 @@
-import { defineAction } from "astro:actions";
+import { defineAction, isInputError } from "astro:actions";
 import { z } from "astro:schema";
+import { saveComment } from "../database/addComment";
 
 export const server = {
-  myAction: defineAction({
-    comentario: z.object({
-      texto: z.string().min(10, "El comentario no puede contener menos de 10 caracteres").max(250, "El comentario no puede contener más de 250 caracteres"),
-      nombre: z.string().min(3, "El nombre no puede contener menos de 3 caracteres").max(25, "El nombre no puede contener más de 25 caracteres"),
+  addCommentToDB: defineAction({
+    input: z.object({
+      nombre: z.string().min(3).max(25),
+      texto: z.string().min(10).max(250)
     }),
-    handler: async (comentario) => {
+    handler: async (input) => {
+      const { success, error } = await saveComment(input.nombre, input.texto);
+      if(success){
+        return {
+          success,
+          message: "Gracias por tu comentario!"
+        }
+      }
       return {
-        success: true,
-        message: "Gracias por tu comentario!"
+        success,
+        message: error
       };
     }
   })
