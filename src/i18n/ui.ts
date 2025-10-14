@@ -48,7 +48,7 @@ export const labels = {
         'pj.p1name': 'Eurogen ERP',
         'pj.p1text': 'Management software used by Eurogen SRL, a multi-sucursal local business, made in WinDev with focus on clients, stock and selling management.',
         'pj.p2name': 'Rustico Hogar ERP',
-        'pj.p2text': `Very similar to Eurogen's ERP but oriented in a national-scale bussiness, BYV Importaciones SRL, with same functionalities as Eurogen but with a plus in data analisys and connected with PowerBI.`,
+        'pj.p2text': `Very similar to Eurogen's ERP but oriented to a national-scale bussiness, BYV Importaciones SRL, with same functionalities as Eurogen but with a plus in data analisys and connected with PowerBI.`,
         'pj.p3name': 'Sonora Podcast Landing Page',
         'pj.p3text': 'Landing page for a regional event about podcasts from all over latin-america, made with Astro.',
         'pj.p4name': 'Tetris Web Game',
