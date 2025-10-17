@@ -22,7 +22,7 @@ if(comments.success){
             {comentarios.map((comentario) => {
                 let date = new Date(comentario.created_at);
                 return (
-                    <div class="block min-w-96 w-96 p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <div class="block min-w-96 w-96 p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-200 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 hover:scale-105 transition-all duration-300">
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
                             {comentario.name}
                         </h3>

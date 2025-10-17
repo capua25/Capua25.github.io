@@ -25,7 +25,7 @@ const translated = useTranslation(currentLang as keyof typeof labels);
           </div>
         </div>
         <div class="p-6">
-          <h3 class="mt-2 text-xl font-bold text-accent-green">
+          <h3 class="mt-2 text-xl font-bold text-accent-green bg-gray-400 dark:bg-transparent rounded-full px-3 dark:px-0">
             {translated("pj.p1name")}
           </h3>
           <p class="mt-2 text-gray-600 dark:text-gray-300">
@@ -45,7 +45,7 @@ const translated = useTranslation(currentLang as keyof typeof labels);
           </div>
         </div>
         <div class="p-6">
-          <h3 class="mt-2 text-xl font-bold text-accent-green">
+          <h3 class="mt-2 text-xl font-bold text-accent-green bg-gray-400 dark:bg-transparent rounded-full px-3 dark:px-0">
             {translated("pj.p2name")}
           </h3>
           <p class="mt-2 text-gray-600 dark:text-gray-300">
@@ -65,7 +65,7 @@ const translated = useTranslation(currentLang as keyof typeof labels);
           </div>
         </div>
         <div class="p-6">
-          <h3 class="mt-2 text-xl font-bold text-accent-green">
+          <h3 class="mt-2 text-xl font-bold text-accent-green bg-gray-400 dark:bg-transparent rounded-full px-3 dark:px-0">
             {translated("pj.p3name")}
           </h3>
           <p class="mt-2 text-gray-600 dark:text-gray-300">
@@ -88,16 +88,13 @@ const translated = useTranslation(currentLang as keyof typeof labels);
           </div>
         </div>
         <div class="p-6">
-          <h3 class="mt-2 text-xl font-bold text-accent-green">
+          <h3 class="mt-2 text-xl font-bold text-accent-green bg-gray-400 dark:bg-transparent rounded-full px-3 dark:px-0">
             {translated("pj.p4name")}
           </h3>
           <p class="mt-2 text-gray-600 dark:text-gray-300">
             {translated("pj.p4text")}
           </p>
           <div class="mt-4 flex gap-4">
-            <!-- <a class="inline-block bg-accent-green text-background-dark text-sm font-bold py-2 px-4 rounded hover:bg-accent-green/90 transition-colors" href="#">
-              {translated("pj.button1")}
-            </a> -->
             <Modal title={translated("pj.button1")} openID="open3" modalID="modal3" closeID="close3">
               <Image src={Tetris} alt="Eurogen" class="w-full h-3/4 mt-24 object-contain"></Image>
             </Modal>

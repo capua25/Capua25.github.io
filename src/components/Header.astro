@@ -12,11 +12,11 @@ const currentLang = Astro.currentLocale || "en";
 const translated = useTranslation(currentLang as keyof typeof labels);
 ---
 
-<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<header class="sticky top-0 z-50 bg-gray-400/80 dark:bg-background-dark/80 backdrop-blur-sm">
     <div class="container box-border mx-0 sm:mx-auto px-0 sm:px-6 lg:px-8 min-h-36 sm:min-h-16">
-        <div class="flex items-center flex-col sm:flex-row justify-evenly sm:justify-between min-h-36 sm:min-h-16 border-b border-gray-200 dark:border-gray-800 w-full">
-            <div class="flex items-center justify-center gap-4 mb-2 sm:mb-0">
-                <Image src={LogoM4} alt="Mi Logo" class="h-8 w-8"/>
+        <div class="flex items-center flex-col sm:flex-row justify-evenly sm:justify-between min-h-36 sm:min-h-16 border-b border-gray-400 dark:border-gray-800 w-full">
+            <div class="flex items-center justify-center gap-4 mb-2 sm:mb-0 pr-3 pl-6 py-2 rounded-lg">
+                <Image src={LogoM4} alt="Mi Logo" class=" h-8 w-8"/>
                 <h2 class="text-xl text-center min-w-48 font-bold text-gray-900 dark:text-white">Martín Capuano</h2>
             </div>
             <nav class="hidden w-full lg:flex items-center justify-center gap-8">
@@ -26,7 +26,7 @@ const translated = useTranslation(currentLang as keyof typeof labels);
                 <a class="text-sm font-medium hover:text-accent-green transition-colors" href="#projects">{translated('nav.projects')}</a>
                 <a class="text-sm font-medium hover:text-accent-green transition-colors" href="#contact">{translated('nav.contact')}</a>
             </nav>
-            <div class="flex items-center justify-center w-full sm:w-16 gap-8 mb-2">
+            <div class="flex items-center justify-center w-full sm:w-16 gap-8 mb-2 sm:mb-0">
                 <div class="w-10 h-10 rounded-full bg-cover bg-center"
                     style={`background-image: url(${mifoto.src});`}
                 >
