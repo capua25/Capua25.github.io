@@ -8,10 +8,10 @@ const translated = useTranslation(currentLang as keyof typeof labels);
 <section id="about-me"></section>
 <section id="about">
     <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white">
+        <h2 class="text-3xl font-bold text-white">
             {translated('about.title')}
         </h2>
-        <p class="mt-6 text-lg text-gray-600 dark:text-gray-300" set:html={translated('about.text')}>
+        <p class="mt-6 text-lg text-gray-300" set:html={translated('about.text')}>
         </p>
     </div>
 </section>
