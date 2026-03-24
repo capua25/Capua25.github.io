@@ -12,7 +12,7 @@ const currentLang = Astro.currentLocale || "en";
 const translated = useTranslation(currentLang as keyof typeof labels);
 ---
 
-<header class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+<header class="fixed top-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 transition-transform duration-300">
     <div class="container box-border mx-0 sm:mx-auto px-0 sm:px-6 lg:px-8">
         <div class="flex items-center flex-col sm:flex-row justify-evenly sm:justify-between min-h-16 border-b border-gray-200 dark:border-gray-800 w-full">
             <div class="flex items-center justify-center gap-4 mb-2 sm:mb-0 pr-3 pl-6 py-2 rounded-lg">
@@ -70,6 +70,20 @@ const translated = useTranslation(currentLang as keyof typeof labels);
 </header>
 
 <script>
+    const header = document.querySelector('header') as HTMLElement;
+    document.body.style.paddingTop = header.offsetHeight + 'px';
+
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > lastScrollY && currentScrollY > 80) {
+            header.classList.add('-translate-y-full');
+        } else {
+            header.classList.remove('-translate-y-full');
+        }
+        lastScrollY = currentScrollY;
+    }, { passive: true });
+
     const burger = document.getElementById('burger');
     const menu = document.getElementById('menu');
 
