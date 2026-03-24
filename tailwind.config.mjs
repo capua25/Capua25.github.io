@@ -5,9 +5,10 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-			  "background-light": "#f6f6f8",
+			  "background-light": "#FAF8F5",
 			  "background-dark": "#111121",
 			  "accent-green": "#a3e635",
+			  "card-light": "#F0EDE8",
 			},
 			fontFamily: {
 			  heading: ['AlteHaasGroteskBold', 'system-ui', 'sans-serif'],
