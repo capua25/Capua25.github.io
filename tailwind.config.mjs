@@ -5,16 +5,23 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-			  primary: "#32CD32", // Light Green
 			  "background-light": "#f6f6f8",
 			  "background-dark": "#111121",
-			  "accent-green": "#a3e635",//a3e635
+			  "accent-green": "#a3e635",
+			},
+			fontFamily: {
+			  heading: ['AlteHaasGroteskBold', 'system-ui', 'sans-serif'],
+			  subheading: ['AlteHaasGroteskRegular', 'system-ui', 'sans-serif'],
 			},
 			borderRadius: {
-			  DEFAULT: "0.25rem",
-			  lg: "0.5rem",
-			  xl: "0.75rem",
+			  DEFAULT: "0.5rem",
+			  lg: "0.75rem",
+			  xl: "1rem",
 			  full: "9999px"
+			},
+			boxShadow: {
+			  card: "0 2px 12px 0 rgba(0,0,0,0.08)",
+			  modal: "0 8px 32px 0 rgba(0,0,0,0.24)",
 			},
 		  },
 	},

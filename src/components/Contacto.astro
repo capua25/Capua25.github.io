@@ -46,7 +46,7 @@ const translated = useTranslation(currentLang as keyof typeof labels);
           {translated("contact.name")}
         </label>
         <input
-          class="mt-1 block w-full px-4 py-3 bg-white dark:bg-gray-800/20 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:ring-accent-green focus:border-accent-green"
+          class="mt-1 block w-full px-4 py-3 bg-white dark:bg-gray-800/20 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-accent-green focus:border-accent-green"
           id="name"
           name="name"
           placeholder={translated("contact.nameplaceholder")}
@@ -58,7 +58,7 @@ const translated = useTranslation(currentLang as keyof typeof labels);
           {translated("contact.message")}
         </label>
         <textarea
-          class="mt-1 block w-full px-4 py-3 bg-white dark:bg-gray-800/20 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:ring-accent-green focus:border-accent-green"
+          class="mt-1 block w-full px-4 py-3 bg-white dark:bg-gray-800/20 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-accent-green focus:border-accent-green"
           id="message"
           name="message"
           placeholder={translated("contact.messageplaceholder")}
@@ -70,7 +70,7 @@ const translated = useTranslation(currentLang as keyof typeof labels);
         </p>
       </div>
       <div class="text-center">
-        <button class="inline-block bg-accent-green text-background-dark font-bold py-3 px-8 rounded-lg hover:bg-accent-green/90 transition-colors" type="submit">
+        <button class="inline-block bg-accent-green text-background-dark font-bold py-3 px-8 rounded-lg hover:bg-accent-green/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-green focus-visible:ring-offset-2" type="submit">
           {translated("contact.button")}
         </button>
       </div>
