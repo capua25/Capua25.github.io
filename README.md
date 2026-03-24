@@ -45,12 +45,12 @@ src/
 | `Header.astro` | Navbar sticky, menú burger, selector idioma |
 | `Landing.astro` | Hero con CTA y descarga de CV |
 | `About.astro` | Bio con highlights en verde |
-| `Experiencia.astro` | Timeline: Eurogen SRL + Freelance |
-| `Skills.astro` | Grid de 8 tecnologías |
-| `Proyectos.astro` | 4 proyectos con modales (Eurogen, Rustico, Sonora, Tetris) |
+| `Experiencia.astro` | Timeline de experiencia laboral: Eurogen SRL + Freelance |
+| `Skills.astro` | Grid de tecnologías |
+| `Proyectos.astro` | Algunos de mis proyectos con modales |
 | `Contacto.astro` | Formulario con validación → Supabase |
 | `Comentarios.astro` | Muestra comentarios guardados |
-| `Footer.astro` | Links sociales (LinkedIn, GitHub) |
+| `Footer.astro` | Links a redes sociales (LinkedIn, GitHub) |
 
 ---
 
@@ -70,14 +70,6 @@ src/
 - **Output**: `server` (SSR habilitado)
 - **Adapter**: `@astrojs/vercel`
 - **i18n**: `defaultLocale: "en"`, sin prefijo en la ruta por defecto
-- **Site**: `https://martin-capuano.vercel.app/en`
+- **Site**: `https://capuanomartin.dev`
 
 ---
-
-## Scripts
-
-```bash
-pnpm dev      # Servidor de desarrollo
-pnpm build    # Build de producción
-pnpm preview  # Preview del build
-```
