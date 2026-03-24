@@ -5,8 +5,7 @@ import { labels } from "../i18n/ui";
 const currentLang = Astro.currentLocale || "en";
 const translated = useTranslation(currentLang as keyof typeof labels);
 ---
-<section id="about-me"></section>
-<section id="about" class="bg-gray-400 dark:bg-transparent rounded-3xl sm:rounded-full py-6">
+<section id="about" class="bg-gray-400 dark:bg-transparent rounded-3xl py-6">
     <div class="max-w-3xl mx-auto text-center">
         <h2 class="text-3xl font-bold text-gray-900 dark:text-white">
             {translated('about.title')}

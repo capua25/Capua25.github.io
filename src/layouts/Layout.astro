@@ -12,15 +12,25 @@ const { title } = Astro.props;
 <html lang={currentLang}>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Martín Capuano personal portfolio made with Astro" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image" href="/M5.webp" />
+		<link rel="icon" type="image/webp" href="/M5.webp" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="author" content="Martín Capuano" />
 		<meta name="keywords" content="Martín Capuano, Martín, Capuano, Portfolio, Developer, Web Developer, Full Stack Developer, JavaScript, TypeScript, Node.js, Astro, Windev, Uruguay" />
-		<meta name="description" content="Martín Capuano's personal portfolio as software and web developer."/>
-		<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+		<meta name="description" content="Martín Capuano's personal portfolio as software and web developer." />
+		<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+		<meta property="og:title" content="Martín Capuano - Software Developer" />
+		<meta property="og:description" content="Martín Capuano's personal portfolio as software and web developer." />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="/M5.webp" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Martín Capuano - Software Developer" />
+		<meta name="twitter:description" content="Martín Capuano's personal portfolio as software and web developer." />
+		<script is:inline>
+			const theme = localStorage.getItem('theme') ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+			document.documentElement.classList.toggle('dark', theme === 'dark');
+		</script>
 	</head>
 	<body class="bg-gray-200 dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
 		<slot />
