@@ -34,9 +34,9 @@ const translated = useTranslation(currentLang as keyof typeof labels);
             {translated("pj.p5text")}
           </p>
           <div class="mt-4 flex gap-4">
-            <Modal title={translated("pj.button1")} openID="open1" modalID="modal1" closeID="close1">
-              <Image src={CajaNeta} alt="Caja Neta App" class="w-full h-3/4 mt-24 object-contain"></Image>
-            </Modal>
+            <a class="inline-block bg-accent-green text-background-dark text-sm font-bold py-2 px-4 rounded hover:bg-accent-green/90 transition-colors" href="https://cajanetaapp.com" target="_blank">
+              {translated("pj.button1")}
+            </a>
           </div>
         </div>
       </div>
